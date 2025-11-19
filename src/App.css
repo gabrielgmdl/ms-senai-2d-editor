@@ -201,23 +201,25 @@ button.primary {
   text-align: center;
   padding: 0.25rem;
   cursor: move;
-  transition: border 0.15s ease, box-shadow 0.15s ease;
+  transition: border 0.15s ease;
   min-width: 1px;
   min-height: 1px;
   left: 0;
   top: 0;
   user-select: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.board button.piece:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .board button.piece.dragging {
-  opacity: 0.8;
+  opacity: 0.85;
   z-index: 10;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+
+.board button.piece:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: none;
 }
 
 .board button.piece span {
