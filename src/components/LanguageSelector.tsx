@@ -9,7 +9,8 @@ export const LanguageSelector = () => {
     i18n.changeLanguage(event.target.value)
   }
 
-  return (
+  return (<>
+    <img src="../src/assets/logo-senai.png" />
     <label className="language-selector">
       <span>{t('language.label')}</span>
       <select value={i18n.language} onChange={handleChange}>
@@ -20,6 +21,6 @@ export const LanguageSelector = () => {
         ))}
       </select>
     </label>
-  )
+  </>)
 }
 
